@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "node src/index",
-    "test": "ENV=test jest --coverage --config jest.config.json",
-    "test:watch": "ENV=test jest --no-cache --watch --notify --notifyMode=change --coverage --config jest.config.json"
+    "test": "cross-env ENV=test jest --coverage --config jest.config.json",
+    "test:watch": "cross-env ENV=test jest --no-cache --watch --notify --notifyMode=change --coverage --config jest.config.json"
   },
   "keywords": [],
   "author": "",
@@ -20,6 +20,7 @@
     "uuid": "^3.3.2"
   },
   "devDependencies": {
+    "cross-env": "^5.2.0",
     "jest": "^24.3.1",
     "supertest": "^3.4.2"
   }
